@@ -12,8 +12,7 @@ const eqArrays = function(actual, expected) {
 };
 
 const assertArraysEq = function(actual, expected) {
-  let eqArraysResult = eqArrays(actual, expected);
-  if (eqArrays(actual, expected) === true) {
+    if (eqArrays(actual, expected) === true) {
     console.log(`👍👍👍${actual} === ${expected}`);
   } else if (eqArrays(actual, expected) === false) {
     console.log(`👎👎👎Assertion Failed: ${actual} !== ${expected}`);
@@ -26,23 +25,23 @@ const assertArraysEq = function(actual, expected) {
 //Store the values we want to keep in a new empty array.
 
 
-const without = function(array, values){
+const without = function(array, values) {
   //create a new empty array to store the values we want to keep.
   let keepArray = [];
   //create a loop to cycle through our arrays.
-  for (let i = 0; i < array.length; i++){
+  for (let i = 0; i < array.length; i++) {
     //if values does include the elements in array
     //push the not included elements in array to our new array.
-    if (!values.includes(array[i])){
+    if (!values.includes(array[i])) {
       keepArray.push(array[i]);
     }
   }
-return keepArray;
-}
+  return keepArray;
+};
 
-assertArraysEq(without([1, 2, 3], [1]), [2, 3]) // => [2, 3]
+assertArraysEq(without([1, 2, 3], [1]), [2, 3]); // => [2, 3]
 
-assertArraysEq(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]) // => ["1", "2"]
-assertArraysEq(without([1,2,3,4,5], [3,4,5,6,7,8,9,10]), [1 , 2])
-assertArraysEq(without([1, 2, 4], [1 , '2', '3', 4]), [1])
-assertArraysEq(without(["hello", 1 , 2 , "hooman"], ["hello", 2]), [1, "hooman"])
+assertArraysEq(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => ["1", "2"]
+assertArraysEq(without([1,2,3,4,5], [3,4,5,6,7,8,9,10]), [1 , 2]);
+assertArraysEq(without([1, 2, 4], [1 , '2', '3', 4]), [1]);
+assertArraysEq(without(["hello", 1 , 2 , "hooman"], ["hello", 2]), [1, "hooman"]);
