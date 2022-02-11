@@ -12,13 +12,15 @@ const eqArrays = function(actual, expected) {
 };
 
 const assertArraysEq = function(actual, expected) {
-  let eqArraysResult = eqArrays(actual, expected);
-  if (actual === expected) {
-    return `👍👍👍${actual} === ${expected}`;
+  
+  if (eqArrays(actual, expected)) {
+    console.log(`✅✅✅${actual} === ${expected}`);
   } else {
-    return `👎👎👎Assertion Failed: ${actual} !== ${expected}`;
+    console.log(`❌❌❌Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
-console.log(assertArraysEq());
+
+
+
 
