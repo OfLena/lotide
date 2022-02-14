@@ -1,23 +1,7 @@
-const eqArrays = function(actual, expected) {
-  if (actual.length !== expected.length) {
-    return false;
-  } else {
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
+//Middle Takes in an array.
+//If the length of the array is odd it outputs the middle element.
+//If the length of the array is even it outputs the middle two elements.
 
-const assertArraysEq = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 
 const middle = function(array) {
   let middleArray = [];
@@ -32,11 +16,4 @@ const middle = function(array) {
   return middleArray;
 };
 
-assertArraysEq(middle([1]), []); // => []
-assertArraysEq(middle([1, 2]), []); // => []
-
-assertArraysEq(middle([1, 2, 3]), [2]); // => [2]
-assertArraysEq(middle([1, 2, 3, 4, 5]), [3]); // => [3]
-
-assertArraysEq(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
-assertArraysEq(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // => [3, 4]
+module.exports = middle;
