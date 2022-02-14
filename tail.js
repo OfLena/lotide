@@ -2,8 +2,8 @@
 //It then removes the first element from the array.
 
 const tail = function(array) {
-  let tailArray = array.slice(1);
-  return tailArray;
+  let result = array.slice(1);
+  return result;
 };
 
 module.exports = tail;

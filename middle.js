@@ -4,16 +4,18 @@
 
 
 const middle = function(array) {
-  let middleArray = [];
+  let evenArray = [];
+  let oddArray = [];
   if (array.length <= 2) {
-    middleArray = [];
+    return [];
   } else if (array.length % 2 === 0) {
-    middleArray.push(array[(array.length / 2) - 1]);
-    middleArray.push(array[(array.length / 2)]);
-  } else if (array.length % 2 === 1) {
-    middleArray.push(array[Math.floor(array.length / 2)]);
+    evenArray.push(array[(array.length / 2) - 1]);
+    evenArray.push(array[(array.length / 2 | 0)]);
+    return evenArray;
+  } else if (array.length % 2 !== 0) {
+    oddArray.push(array[(array.length / 2 | 0)]);
+    return oddArray;
   }
-  return middleArray;
 };
 
 module.exports = middle;
