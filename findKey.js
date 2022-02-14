@@ -16,6 +16,8 @@ for (const stars in object){
 }
 };
 
+module.exports = findKey;
+
 findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },

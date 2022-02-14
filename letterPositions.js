@@ -13,6 +13,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
+
 const eqArrays = function(actual, expected) {
   if (actual.length !== expected.length) {
     return false;

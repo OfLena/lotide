@@ -39,6 +39,8 @@ const without = function(array, values) {
   return keepArray;
 };
 
+module.exports = without;
+
 assertArraysEq(without([1, 2, 3], [1]), [2, 3]); // => [2, 3]
 
 assertArraysEq(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => ["1", "2"]

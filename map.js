@@ -35,6 +35,8 @@ const map = function(array, callback) {
   return results;
 };
 
+module.exports = map;
+
 const results1 = map(test1, word => word[0]);
 
 
