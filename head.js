@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 //Returns the element at Index[0] of the array.
 
 const head = function(array){
